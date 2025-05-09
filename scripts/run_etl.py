@@ -2,6 +2,7 @@ import os
 import sys
 from config.env_config import setup_env
 from etl.extract.extract import extract_data
+from etl.transform.transform import transform_data
 
 
 def main():
@@ -10,6 +11,10 @@ def main():
     print("Extracting data...")
     extracted_data = extract_data()
     print("Data extraction complete.")  
+    
+    print("Transforming data...")
+    transformed_data = transform_data()
+    print("Data transformation complete.")  
 
     print(
         f"ETL pipeline run successfully in "
