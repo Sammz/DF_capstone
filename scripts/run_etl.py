@@ -13,8 +13,10 @@ def main():
     print("Data extraction complete.")  
     
     print("Transforming data...")
-    transformed_data = transform_data()
-    print("Data transformation complete.")  
+    transformed_data = transform_data(extracted_data)
+    print("Data transformation complete.")
+    
+    
 
     print(
         f"ETL pipeline run successfully in "
