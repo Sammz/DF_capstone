@@ -49,7 +49,6 @@ def create_uk_house_prices_2025_table(data: pd.DataFrame):
         logger.warning("Target table exists")
         logger.setLevel(logging.INFO)
         logger.info("Upserting data into existing table instead")
-        set_primary_key(connection)
         upsert_on_existing_table(data, connection)
     except DatabaseConfigError as e:
         logger.setLevel(logging.ERROR)
@@ -77,7 +76,8 @@ def upsert_on_existing_table(data: pd.DataFrame, connection):
 
         # Reflect the table from the database
         metadata = MetaData()
-        table = Table(TARGET_TABLE_NAME, metadata, autoload_with=connection)
+        table = Table(TARGET_TABLE_NAME, metadata, schema=SCHEMA,
+                      autoload_with=connection)
 
         # Create an insert statement with an upsert (ON CONFLICT) clause
         insert_stmt = insert(table).values(data_dict)
