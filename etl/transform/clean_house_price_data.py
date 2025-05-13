@@ -20,8 +20,8 @@ WARNING_THRESHOLD = 10
 
 
 def clean_house_price_data(house_price_data: pd.DataFrame) -> pd.DataFrame:
-    # Remove transaction_id column as it is not meaningful for this project
-    house_price_data.drop('transaction_id', axis=1, inplace=True)
+    # Set transaction_id as the index to become the primary key in the database
+    house_price_data.set_index('transaction_id')
 
     # Parse all dates with pd.to_datetime. Coerce errors means it will put
     # a null value if parsing fails.
