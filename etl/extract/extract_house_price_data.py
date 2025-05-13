@@ -11,9 +11,14 @@ logger = setup_logger(
     level=logging.DEBUG
 )
 
-yearly_house_price_data_2025_url = "http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-2025.csv"
-column_names = ['transaction_id', 'price', 'date', 'postcode', 'property_type', 'newbuild', 'duration', 'PAON', 'SAON', 'street', 'locality', 'city', 'district', 'county', 'ppd_category_type', 'record_status']
- 
+yearly_house_price_data_2025_url = "http://prod.publicdata.landregistry.gov.uk"
+yearly_house_price_data_2025_url += ".s3-website-eu-west-1.amazonaws.com"
+yearly_house_price_data_2025_url += "/pp-2025.csv"
+
+column_names = ['transaction_id', 'price', 'date', 'postcode', 'property_type',
+                'newbuild', 'duration', 'PAON', 'SAON', 'street', 'locality',
+                'city', 'district', 'county', 'ppd_category_type',
+                'record_status']
 
 EXPECTED_IMPORT_RATE = 0.001
 TYPE = 'house price data from URL'
@@ -22,9 +27,10 @@ TYPE = 'house price data from URL'
 def extract_house_prices() -> pd.DataFrame:
     try:
         start_time = time.time()
-        dataframe = pd.read_csv(yearly_house_price_data_2025_url, header=None, names=column_names)
+        dataframe = pd.read_csv(yearly_house_price_data_2025_url, header=None,
+                                names=column_names)
         duration = time.time() - start_time
-        
+
         log_extract_success(
                 logger,
                 TYPE,
@@ -37,8 +43,9 @@ def extract_house_prices() -> pd.DataFrame:
 
     except Exception as e:
         logger.setLevel(logging.ERROR)
-        logger.error(f"Error loading from \"{yearly_house_price_data_2025_url}\": {e}")
-        raise Exception(f"Failed to load data from: \"{yearly_house_price_data_2025_url}\"")
 
+        # Shorten variable name to comply with flake8 in error message
+        url = yearly_house_price_data_2025_url
 
-    
+        logger.error(f"Error loading from \"{url}\": {e}")
+        raise Exception(f"Failed to load data from: \"{url}\"")
