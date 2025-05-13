@@ -3,6 +3,4 @@ from etl.transform.clean_house_price_data import clean_house_price_data
 
 
 def transform_data(data) -> pd.DataFrame:
-    cleaned_house_price_data = clean_house_price_data(data)
-
-    return clean_house_price_data
+    return clean_house_price_data(data)
