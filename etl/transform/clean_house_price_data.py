@@ -47,6 +47,19 @@ def clean_data(house_price_data):
     # Remove rows with missing values
     house_price_data = remove_missing_values(house_price_data)
 
+    # Remove Additional Price Paid entries. This ensures the price paid
+    # is always for a single residential property.
+    house_price_data = house_price_data[
+        house_price_data['ppd_category_type'] == 'A']
+
+    # Remove records that have the Change or Delete status.
+    house_price_data = house_price_data[
+        house_price_data['record_status'] == 'A']
+
+    # Drop ppd_category_type and record_status columns
+    house_price_data = house_price_data.drop(
+        ['ppd_category_type', 'record_status'], axis=1)
+
     # Make new build column values into full words
     house_price_data['newbuild'] = house_price_data[
         'newbuild'].map({'Y': 'New build', 'N': 'Established'})
