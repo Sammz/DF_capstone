@@ -123,6 +123,9 @@ def upsert_on_existing_table(data: pd.DataFrame, connection):
         logger.info("Successfully closed database session.")
 
 
+# Set primary key to be the transaction_id. For future runs of
+# the pipeline, it will serve as a way to integrate different
+# years of house price data or even the full dataset of over 4GB.
 def set_primary_key(connection):
     create_primary_key_query = import_sql_query(
         LOAD_QUERY_FILES["set_primary_key"]
