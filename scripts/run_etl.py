@@ -11,7 +11,7 @@ def main():
 
     print("Extracting data...")
     extracted_data = extract_data()
-    print("Data extraction complete.")  
+    print("Data extraction complete.")
 
     print("Transforming data...")
     transformed_data = transform_data(extracted_data)
