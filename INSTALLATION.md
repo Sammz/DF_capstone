@@ -1,16 +1,18 @@
 # ![Digital Futures Academy](https://github.com/digital-futures-academy/DataScienceMasterResources/blob/main/Resources/datascience-notebook-header.png?raw=`true`)
 
-## Project Set Up
+## Project Installation
 
 1. Production, test and development environments.
 2. Installing the required dependencies.
-3. Run the pipeline or the tests
+3. Run the pipeline 
+4. Run the tests
+5. Run the streamlit app
 
 ---
 
 
 
-### Step 1: Set Up the Environments
+### 1: Set Up the Environments
 
 #### 1.1. Create `.env.xxx` Files
 
@@ -79,7 +81,7 @@ source .venv/bin/activate       # On Windows, use .venv\Scripts\activate
 
 ---
 
-### Step 2: Install the Required Dependencies
+### 2: Install the Required Dependencies
 
 
 
@@ -96,17 +98,26 @@ pip install -e .
 ```
 
 ---
-### Step 3: Run the pipeline or the tests
+### Step 3: Run the pipeline
 
 Run the pipeline with the run_etl command:
 ```sh
 run_etl <env>  # Where <env> is replaced by the name of the environment to run in, e,g dev
 ```
 
-Run the tests in the project (test mode)
+### 4: Run tests
 
+Run the tests with the run_tests command:
 
 ```
 run_tests <test_type>
 run_tests all # Run all tests
+```
+
+### 5: Run the streamlit app
+
+Run the streamlit app with the streamlit command:
+
+```
+streamlit run streamlit/uk_house_price_visualisation.py 
 ```
