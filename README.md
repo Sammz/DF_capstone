@@ -3,8 +3,9 @@
 ## Digital Futures Data Engineering Academy Capstone Project
 Author: Samuel Witt
 
-This project extracts the UK house price paid data from the UK government website, transforms it and loads it into a database. A streamlit application uses this database to visualise UK house price statistics. 
+This project extracts the 2025 UK house price paid data from the UK government website, transforms it and loads it into a database. A streamlit application uses this database to visualise 2025 residential UK house price statistics. 
 
+---
 
 ### Dataset
 Source of the data: https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads
@@ -19,7 +20,9 @@ Price Paid Data contains address data processed against Ordnance Survey’s Addr
 
 If you want to use the Address Data in any other way, you must contact Royal Mail. Email address.management@royalmail.com.
 
-### User Stories 
+---
+
+### User Stories and planning steps
 ```txt
 USER STORY 1
 
@@ -32,6 +35,41 @@ So that I can create a streamlit app visualising UK house price data.
 USER STORY 2
 
 As a UK resident,
-I want to select a street, postcode, city or region,
-So that I can see the average, minimum and maximum house prices in that location.
+I want to select my postcode or city,
+So that I can see the average house prices in that location.
 ```
+
+Schema design
+
+---
+
+### Installation
+Please visit the [installation instructions](INSTALLATION.md).
+
+---
+
+### Analytical questions
+
+
+---
+
+### Summary of findings
+
+---
+
+
+###  Optimising query execution and performance 
+<!-- How would I go about optimising query execution and performance if the dataset continues to increase? -->
+---
+
+### Error handling and logging
+<!-- What error handling and logging have you included in your code and how this could be leveraged? -->
+---
+
+### Security or privacy issues
+
+<!-- Are there any security or privacy issues that you need to consider and how would you mitigate them? -->
+---
+
+### How this project could be deployed or adapted into an automated cloud environment using the AWS services you have covered?
+<!-- How this project could be deployed or adapted into an automated cloud environment using the AWS services you have covered? -->
