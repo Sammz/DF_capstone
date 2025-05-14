@@ -15,6 +15,7 @@ decorator==5.2.1
 diff_cover==9.2.4
 executing==2.2.0
 flake8==7.2.0
+geopandas==1.0.1
 gitdb==4.0.12
 GitPython==3.1.44
 greenlet==3.2.1
@@ -56,6 +57,8 @@ pycodestyle==2.13.0
 pydeck==0.9.1
 pyflakes==3.3.2
 Pygments==2.19.1
+pyogrio==0.11.0
+pyproj==3.7.1
 pytest==8.3.5
 pytest-cov==6.1.1
 pytest-mock==3.14.0
@@ -71,6 +74,7 @@ regex==2024.11.6
 requests==2.32.3
 rpds-py==0.24.0
 setuptools==78.1.0
+shapely==2.1.0
 six==1.17.0
 smmap==5.0.2
 SQLAlchemy==2.0.40
@@ -85,7 +89,7 @@ tqdm==4.67.1
 traitlets==5.14.3
 typing_extensions==4.13.1
 tzdata==2025.2
--e git+https://github.com/Sammz/DF_capstone.git@d66a5906b07fc3f923a5ec1e7fc6720550f51542#egg=UK_house_prices
+-e git+https://github.com/Sammz/DF_capstone.git@9000ede4d89af45a32cc033ca2dd2d05cbcbfaf1#egg=UK_house_prices
 urllib3==2.4.0
 watchdog==6.0.0
 wcwidth==0.2.13
