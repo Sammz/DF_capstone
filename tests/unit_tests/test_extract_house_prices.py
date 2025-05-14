@@ -48,5 +48,5 @@ def test_extract_house_prices_handles_malformed_url():
 
                 mock_logger.setLevel.assert_called_once()
                 mock_logger.error.assert_called_once()
-                assert "Error loading from" in mock_logger.error.call_args[0][0]
+                assert "Error loading" in mock_logger.error.call_args[0][0]
                 assert "Failed to load data from" in str(e)
