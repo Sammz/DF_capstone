@@ -82,10 +82,6 @@ Please visit the [installation instructions](INSTALLATION.md).
 
 ---
 
-### Summary of findings
-
----
-
 
 ###  Optimising query execution and performance
 <!-- How would I go about optimising query execution and performance if the dataset continues to increase? -->
