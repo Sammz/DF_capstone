@@ -100,6 +100,11 @@ fig = px.bar(
 
 st.plotly_chart(fig)
 
+st.table([['Affordable', 'Cheap', 'Mid-range', 'High-end',
+           'Millionaire Territory', 'Absolute Unit'],
+          ['0 - 250k', '250k - 500k', '500k - 750k', '750k - 1m',
+           '1m - 10m', '10m +']])
+
 
 # Create average house price by district map
 # With geo data from: https://martinjc.github.io/UK-GeoJSON/
