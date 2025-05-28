@@ -1,14 +1,27 @@
 import streamlit as st
-import pandas as pd
 import plotly.express as px
 import geopandas as gpd
+from etl.extract.extract import extract_data
+from etl.transform.transform import transform_data
 
 # Set the title of the app
 st.title("2025 England house prices Explorer")
 
-# Load the house price dataset
-data_file_path = 'etl/data/processed/cleaned_house_price_data.csv'
-df = pd.read_csv(data_file_path)
+# # Load the house price dataset
+# data_file_path = 'etl/data/processed/cleaned_house_price_data.csv'
+# df = pd.read_csv(data_file_path)
+
+with st.spinner("Please wait while data loads..."):
+    # Load the data from the internet for deployment
+    print("Extracting data...")
+    extracted_data = extract_data()
+    print("Data extraction complete.")
+
+    print("Transforming data...")
+    transformed_data = transform_data(extracted_data)
+    print("Data transformation complete.")
+
+    df = transformed_data
 
 # Show data
 st.write("Here is a preview of the data:")
