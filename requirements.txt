@@ -73,7 +73,7 @@ referencing==0.36.2
 regex==2024.11.6
 requests==2.32.3
 rpds-py==0.24.0
-setuptools==78.1.0
+# setuptools==78.1.0
 shapely==2.1.0
 six==1.17.0
 smmap==5.0.2
@@ -92,4 +92,4 @@ tzdata==2025.2
 urllib3==2.4.0
 watchdog==6.0.0
 wcwidth==0.2.13
-wheel==0.45.1
+# wheel==0.45.1
