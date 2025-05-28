@@ -89,7 +89,6 @@ tqdm==4.67.1
 traitlets==5.14.3
 typing_extensions==4.13.1
 tzdata==2025.2
--e git+https://github.com/Sammz/DF_capstone.git@9000ede4d89af45a32cc033ca2dd2d05cbcbfaf1#egg=UK_house_prices
 urllib3==2.4.0
 watchdog==6.0.0
 wcwidth==0.2.13
