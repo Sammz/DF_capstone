@@ -1,9 +1,13 @@
 import sys
 import os
 
-# Add the parent directory to Python path
 # For streamlit to be able to find the etl folder
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# FORCE the root directory of your project into the path
+sys.path.insert(0, "/mount/src/df_capstone")
+
+# debug print to verify
+print("PYTHONPATH:", sys.path)
+
 
 import streamlit as st
 import plotly.express as px
