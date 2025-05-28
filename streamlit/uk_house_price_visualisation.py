@@ -12,7 +12,9 @@ st.title("2025 England house prices Explorer")
 # data_file_path = 'etl/data/processed/cleaned_house_price_data.csv'
 # df = pd.read_csv(data_file_path)
 
-with st.spinner("Please wait while data loads..."):
+
+@st.experimental_memo
+def extract_and_transform_data():
     # Load the data from the internet for deployment
     print("Extracting data...")
     extracted_data = extract_data()
@@ -22,7 +24,11 @@ with st.spinner("Please wait while data loads..."):
     transformed_data = transform_data(extracted_data)
     print("Data transformation complete.")
 
-    df = transformed_data
+    return transformed_data
+
+
+with st.spinner("Please wait while data loads..."):
+    df = extract_and_transform_data()
 
 # Show data
 st.write("Here is a preview of the data:")
