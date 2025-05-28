@@ -26,9 +26,10 @@ def transform_house_price_data(house_price_data: pd.DataFrame) -> pd.DataFrame:
 
     enriched_house_price_data = enrich_data(cleaned_house_price_data)
 
-    # Save the dataframe as a CSV for logging purposes
-    save_dataframe_to_csv(enriched_house_price_data, "etl/data/processed/",
-                          "cleaned_house_price_data.csv",)
+    # dont save it when deployed on streamlit online
+    # # Save the dataframe as a CSV for logging purposes
+    # save_dataframe_to_csv(enriched_house_price_data, "etl/data/processed/",
+    #                       "cleaned_house_price_data.csv",)
 
     return enriched_house_price_data
 
