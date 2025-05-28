@@ -13,7 +13,7 @@ st.title("2025 England house prices Explorer")
 # df = pd.read_csv(data_file_path)
 
 
-@st.experimental_memo
+@st.cache_data
 def extract_and_transform_data():
     # Load the data from the internet for deployment
     print("Extracting data...")
