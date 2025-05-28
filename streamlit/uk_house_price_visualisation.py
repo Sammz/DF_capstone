@@ -111,7 +111,7 @@ st.table([['Affordable', 'Cheap', 'Mid-range', 'High-end',
 # With geo data from: https://martinjc.github.io/UK-GeoJSON/
 average_prices = filtered_df.groupby("district")["price"].mean().reset_index()
 
-geo_data_file = 'data/raw/geojson_data.json'
+geo_data_file = 'geodata/geojson_data.json'
 geo_data = gpd.read_file(geo_data_file)
 
 geo_data["district"] = geo_data["LAD13NM"].str.upper()
