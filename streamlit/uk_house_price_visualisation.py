@@ -4,6 +4,14 @@ import geopandas as gpd
 from etl.extract.extract import extract_data
 from etl.transform.transform import transform_data
 
+import sys
+import os
+
+# Add the parent directory to Python path
+# For streamlit to be able to find the etl folder
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 # Set the title of the app
 st.title("2025 England house prices Explorer")
 
