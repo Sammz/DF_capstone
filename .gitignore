@@ -144,6 +144,7 @@ cython_debug/
 data/raw/
 etl/data/processed/
 data/output/
+geodata
 
 # Logs
 logs/
