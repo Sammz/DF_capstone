@@ -25,15 +25,7 @@ def load_db_config() -> Dict[str, Dict[str, str]]:
     connection parameters.
     """
 
-    config = {
-        "source_database": {
-            "dbname": os.getenv("SOURCE_DB_NAME", "error"),
-            "user": os.getenv("SOURCE_DB_USER", "error"),
-            "password": os.getenv("SOURCE_DB_PASSWORD", ""),
-            "host": os.getenv("SOURCE_DB_HOST", "error"),
-            "port": os.getenv("SOURCE_DB_PORT", "5432"),
-        },
-        "target_database": {
+    config = {"target_database": {
             "dbname": os.getenv("TARGET_DB_NAME", "error"),
             "user": os.getenv("TARGET_DB_USER", "error"),
             "password": os.getenv("TARGET_DB_PASSWORD", ""),
