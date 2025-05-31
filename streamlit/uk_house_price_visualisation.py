@@ -4,7 +4,7 @@ import plotly.express as px
 import geopandas as gpd
 from config.db_config import load_db_config
 from utils.db_utils import get_db_connection
-from config.env_config import setup_env
+# from config.env_config import setup_env
 
 
 # Set the title of the app
