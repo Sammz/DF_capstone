@@ -2,6 +2,7 @@ import os
 import logging
 from utils.logging_utils import setup_logger
 from typing import Dict
+import streamlit as st
 
 
 class DatabaseConfigError(Exception):
@@ -26,11 +27,11 @@ def load_db_config() -> Dict[str, Dict[str, str]]:
     """
 
     config = {"target_database": {
-            "dbname": os.getenv("TARGET_DB_NAME", "error"),
-            "user": os.getenv("TARGET_DB_USER", "error"),
-            "password": os.getenv("TARGET_DB_PASSWORD", ""),
-            "host": os.getenv("TARGET_DB_HOST", "error"),
-            "port": os.getenv("TARGET_DB_PORT", "5432"),
+            "dbname": st.secrets["TARGET_DB_NAME"],
+            "user": st.secrets["TARGET_DB_USER"],
+            "password": st.secrets["TARGET_DB_PASSWORD"],
+            "host": st.secrets["TARGET_DB_HOST"],
+            "port": st.secrets["TARGET_DB_PORT"],
         },
     }
 
