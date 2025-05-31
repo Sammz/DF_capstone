@@ -28,7 +28,7 @@ def load_data():
 df = []
 
 with st.spinner("Please wait while data loads..."):
-    setup_env([0, 'dev'])
+    # setup_env([0, 'dev']) # Remove to deploy on cloud
     try:
         df = load_data()
     except Exception as e:
