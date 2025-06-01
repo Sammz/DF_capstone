@@ -123,7 +123,7 @@ if df is not []:
     average_prices = filtered_df.groupby(
         "district")["price"].mean().reset_index()
 
-    geo_data_file = 'geodata/geojson_data.json'
+    geo_data_file = 'streamlit/geodata/geojson_data.json'
     geo_data = gpd.read_file(geo_data_file)
 
     geo_data["district"] = geo_data["LAD13NM"].str.upper()
