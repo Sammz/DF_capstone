@@ -113,7 +113,7 @@ if df is not []:
 
     # Add explanations of house price categories
     st.write('Category specification:')
-    st.table([['Affordable', 'Cheap', 'Mid-range', 'High-end',
+    st.table([['Cheap', 'Affordable', 'Mid-range', 'High-end',
                'Millionaire Territory', 'Absolute Unit'],
               ['0 - 250k', '250k - 500k', '500k - 750k', '750k - 1m',
                '1m - 10m', '10m +']])
