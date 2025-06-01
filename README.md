@@ -3,7 +3,7 @@
 ## Digital Futures Data Engineering Academy Capstone Project
 Author: Samuel Witt
 
-This project extracts the 2025 UK house price paid data from the UK government website, transforms it and loads it into a database. A streamlit application uses this database to visualise 2025 residential UK house price statistics. 
+This project extracts the 2025 UK house price paid data from the UK government website, transforms it and loads it into a database. A streamlit dashboard uses this database to visualise 2025 residential UK house price statistics here: https://england-house-prices-2025.streamlit.app/
 
 ---
 
@@ -91,7 +91,7 @@ The full historical UK house price dataset currently contains [4.3GB](https://ww
 
 ### Error handling and logging
 <!-- What error handling and logging have you included in your code and how this could be leveraged? -->
-In every step of the ETL pipeline the process is uses error handling and logging to create a streamlined experience. Errors are caught, handled and logged. This ensures that if anything goes wrong, it is easy to trace where in the pipeline it happened and understand how to fix the problem. Informative logging is utilised as well to give updates on what is happening and how long certain steps in the process take. For example the cleaning and enriching steps log an entry when completed with the amount of time they took to complete.
+In every step of the ETL pipeline the process uses error handling and logging to create a streamlined experience. Errors are caught, handled and logged. This ensures that if anything goes wrong, it is easy to trace where in the pipeline it happened and understand how to fix the problem. Informative logging is utilised as well to give updates on what is happening and how long certain steps in the process take. For example the cleaning and enriching steps log an entry when completed with the amount of time they took to complete.
 
 ---
 
